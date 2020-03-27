@@ -1,0 +1,35 @@
+<!-- override standard styles -->
+<style>
+    body {
+        background-color: white;
+    }
+
+    .leaflet-control-graphicscale {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+        white-space: nowrap;
+    }
+
+    #legend, #header, #date-time, #scale-box {
+        -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+    }
+</style>
+<!-- map -->
+<div id="pane1" style="position: absolute; width: {{printWidth}}; height: {{printHeight}}; display: block; overflow: hidden; top: 30px; left:30px; border: 1px solid black">
+    <div id="container1" style="position: relative; width: 200%; height: 200%; left:-50%; top:-50%; display: inline-block;">
+        <div id="map"></div>
+    </div>
+    <div id="header" style="position: absolute; display:block; width: 0px; height: 0px; background-color: white; top: 0px; left: 0px">
+        <b id="title" style="position: absolute; top: 2px; left: 2px; background-color:white; padding-left: 5px; padding-top: 5px; width: 220px;  white-space: nowrap"></b>
+        <p id="comment" style="position: absolute; top: 25px; left: 2px; padding-left: 5px; width: 220px; background-color: white;"></p>
+
+    </div>
+        <div id="header" style="position: absolute; display:block; width: 240px; height: 15px; background-color: white; bottom: 0px; right: 0px">
+        <p style="position: absolute; bottom: -9px; Left: 60px; font-size: 0.6em;">| Kortet er vejledende © Frederiksberg Kommune</p>    
+        <div id="date-time" style="position: absolute; bottom: 1px; background-color: none; left: 5px;font-size: 0.6em;">{{printDate}}</div>
+    </div>
+    <div id="legend" style="position: absolute; top: 5px; right: 5px; padding: 10px; background-color: white; -webkit-transform: scale(0.6); -webkit-transform-origin:right top; display: {{_showLegend}}"></div>
+    <div id="scale" style="position: absolute; bottom: 0px; left: 10px; font-size: 0.8em;"></div>  
+    <div id="scalebar" style="position: absolute; bottom: 17px; left: 0px;"></div>
+</div>
